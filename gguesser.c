@@ -16,7 +16,8 @@ int main() {
     secretNumber = rand() % 100 + 1;
 
     printf(YELLOW" ****---- Welcome to the Giga Guesser Game! ----**** \n\n" RESET);
-    printf(GREEN"I have chosen a number between 1 and 100.\n" RESET);
+    printf(YELLOW" If You Win You Will get "GREEN"50$ "YELLOW"Paypal!\n\n" RESET);
+    printf(GREEN"I have chosen a number between 1 and 100. So your role is to guess the Number\n" RESET);
     printf(RED"Wanna Accept The Challenge? "GREEN"(yes/no): " RESET);
     char answer[10];
     scanf("%s", answer);
@@ -24,7 +25,7 @@ int main() {
     if (strcmp(answer, "yes") == 0) 
     {
         while (1) {
-            printf(GREEN"So Good , Enter your guess: " RESET);
+            printf(GREEN"So Good , "YELLOW"Enter your guess: " RESET);
             scanf("%d", &guess);
 
             if (guess == secretNumber) 
